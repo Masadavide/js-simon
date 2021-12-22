@@ -42,9 +42,9 @@ function inserisciPrompt(){
 
 
 
-setTimeout(sparireNumeri, 3000);
+setTimeout(sparireNumeri, 30000);
 
-setTimeout(inserisciPrompt, 3010);
+setTimeout(inserisciPrompt, 30100);
 
 let numeriCasualiArray = [];
 let numeriHtml = document.getElementById("numeri");
