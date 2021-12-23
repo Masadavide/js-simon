@@ -28,7 +28,7 @@ function sparireNumeri(){
 
 function inserisciPrompt(){
     for(i = 0; i < 5; i++) {
-        let numeriInseriti = parseInt(prompt('inserisci numero'))
+        let numeriInseriti = parseInt(prompt('Inserisci i numeri che ricordi'))
         console.log(numeriInseriti)
         numeriInseritiArray.push(numeriInseriti)
         if(numeriCasualiArray.includes(numeriInseriti)){
