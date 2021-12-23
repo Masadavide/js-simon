@@ -14,8 +14,15 @@ main{
     position: relative;
 }
 
-h1{
-    margin: 0 auto;
+.titolo{
+    text-align: center;
+    padding-top: 150px;
+}
+
+.titoletto{
+    padding-top: 150px;
+    text-align: center;
+    display: none;
 }
 
 #numeri{
@@ -32,4 +39,8 @@ text-align: center;
 
 .displaynone{
     display: none;
+}
+
+.display{
+    display:block;
 }

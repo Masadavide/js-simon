@@ -23,6 +23,7 @@ function generaNumeriCasuali (numero){
 
 function sparireNumeri(){
     document.getElementById('numeri').classList.add('displaynone');
+    document.getElementById('titolo').classList.add('displaynone');
 }
 
 function inserisciPrompt(){
@@ -36,6 +37,19 @@ function inserisciPrompt(){
             numeriHtml.innerHTML = numeriCorrettiArray
             document.getElementById('numeri').classList.remove('displaynone');
         }
+    }
+    if(numeriCorrettiArray.length == 5){
+        document.getElementById('corretti5').classList.add('display');
+    }else if(numeriCorrettiArray.length == 4){
+        document.getElementById('corretti4').classList.add('display');
+    }else if(numeriCorrettiArray.length == 3){
+        document.getElementById('corretti3').classList.add('display');
+    }else if(numeriCorrettiArray.length == 2){
+        document.getElementById('corretti2').classList.add('display');
+    }else if(numeriCorrettiArray.length == 1){
+        document.getElementById('corretti1').classList.add('display');
+    }else if(numeriCorrettiArray.length == 0){
+        document.getElementById('corretti0').classList.add('display');
     }
     console.log(numeriInseritiArray)
 }
