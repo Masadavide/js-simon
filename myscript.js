@@ -30,12 +30,16 @@ function inserisciPrompt(){
     for(i = 0; i < 5; i++) {
         let numeriInseriti = parseInt(prompt('Inserisci i numeri che ricordi'))
         console.log(numeriInseriti)
-        numeriInseritiArray.push(numeriInseriti)
-        if(numeriCasualiArray.includes(numeriInseriti)){
-            numeriCorrettiArray.push(numeriInseriti)
-            console.log(numeriCorrettiArray)
-            numeriHtml.innerHTML = numeriCorrettiArray
-            document.getElementById('numeri').classList.remove('displaynone');
+
+        if(!numeriInseritiArray.includes(numeriInseriti)){
+            numeriInseritiArray.push(numeriInseriti)
+            
+            if(numeriCasualiArray.includes(numeriInseriti)){
+                numeriCorrettiArray.push(numeriInseriti)
+                console.log(numeriCorrettiArray)
+                numeriHtml.innerHTML = numeriCorrettiArray
+                document.getElementById('numeri').classList.remove('displaynone');
+            }
         }
     }
     if(numeriCorrettiArray.length == 5){
@@ -58,7 +62,7 @@ function inserisciPrompt(){
 
 setTimeout(sparireNumeri, 30000);
 
-setTimeout(inserisciPrompt, 30100);
+setTimeout(inserisciPrompt, 30500);
 
 let numeriCasualiArray = [];
 let numeriHtml = document.getElementById("numeri");
@@ -66,5 +70,8 @@ let numeriInseritiArray = [];
 let numeriCorrettiArray = [];
 
 
+
 generaNumeriCasuali (5);
 console.log(numeriCasualiArray);
+
+
